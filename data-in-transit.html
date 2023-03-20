@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog: Sensitive Data Exposure</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="ethical_hacking.css">
+</head>
+
+<body>
+    <header class="container">
+        <h1 class="text-center my-4">Blog: Sensitive Data Exposure</h1>
+    </header>
+    <nav class="container mb-4">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" href="ethical_hacking.html">Introduction</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="example.html">Examples</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="data-in-transit.html">Data in transit</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="news.html">Data Explosure News</a>
+            </li>
+        </ul>
+    </nav>
+    <main class="container">
+        <article>
+            <h2 id="intro">Data in transit</h2>
+            <p>Data in transit is data that we send from one system to another. This includes personal projects, work,
+                confidential data, or business. It is very important that when our data is in transit from one system to
+                another, it is 100% protected.
+                Here below I will leave tips and examples of how to protect the data that is in transit.
+            <h2>Implementation of secure key and certificate management</h2>
+            </p>
+            <p>In a world where there are so many people and automated machines that know how to steal confidential
+                data, it is important to be alert, since an encryption that used to protect your data is now no longer
+                useful because it has been violated by an algorithm.
+                Simple substitution encryption should not be used because this encryption replaces each letter in the
+                message with another letter of the alphabet. For example, D would be replaced by A, F, or G, and this
+                encryption technique using simple substitution cipher is an easy cipher to break using frequency
+                analysis techniques, which what this frequency does is identify the most common letter in the encrypted
+                message and what this technique does is assume that it corresponds to the most common letter of the
+                alphabet. </p>
+
+            <div class="container d-flex justify-content-center align-items-center">
+                <img src="ROT13.png" alt="Image" class="img-fluid">
+            </div>
+
+            <hr>
+
+            <p> For example, if you use simple substitution encryption for facial data transit, your data will be
+                exposed or stolen and if you are a company you can get a big fine due to the GDPR law and if you are a
+                person you can end up in jail or with a fine for using an obsolete encryption, and the recommendation
+                that I am going to give you is that you use encryption such as AES (Advanced Encryption Standard), this
+                encryption uses a key to encrypt and decrypt the data and uses a block structure to encrypt the data in
+                128-bit blocks. AES is highly secure and resistant to known cryptographic attacks, making it widely used
+                in applications such as file encryption, disk encryption, and network encryption. </p>
+
+            <div class="container d-flex justify-content-center align-items-center">
+                <img src="picture 2.png" alt="Image" class="img-fluid">
+            </div>
+
+            <hr>
+
+            <p>In addition, to protect the privacy and integrity of data in transit through communication networks, it
+                is recommended to use the TLS (Transport Layer Security) protocol that uses AES encryption and other
+                encryption algorithms to protect data. TLS is used by many web applications, such as e-mail and
+                e-commerce, and is essential for ensuring the security of online communications.
+            </p>
+
+            <h3>Ciphers that I would not recommend using under any conditions.</h3>
+            <hr>
+
+            <table border="1">
+                <tr>
+                    <th>Cipher Name</th>
+                    <th>Reasons not to recommend</th>
+                </tr>
+                <tr>
+                    <td>Simple substitution cipher</td>
+                    <td>It is very easy to break using frequency analysis techniques.</td>
+                </tr>
+                <tr>
+                    <td>Vigenère cipher</td>
+                    <td>It is also vulnerable to frequency analysis techniques, plus its key can be easily discovered
+                        using cryptanalytic methods.</td>
+                </tr>
+                <tr>
+                    <td>DES encryption</td>
+                    <td>Its 56-bit key length is very short compared to current encryption standards, and it is
+                        vulnerable to brute force attacks and other cryptanalysis methods.</td>
+                </tr>
+                <tr>
+                    <td>RSA encryption with keys less than 1024 bits</td>
+                    <td>Shorter keys are easier to break using prime factorization techniques.</td>
+                </tr>
+            </table>
+
+            <hr>
+
+            <p>Ciphers that I would recommend using so that the data is not stolen while transiting from one system to
+                another:</p>
+
+            <table border="1">
+                <tr>
+                    <th>Cipher Name</th>
+                    <th>Reasons to recommend it</th>
+                </tr>
+                <tr>
+                    <td>AES (Advanced Encryption Standard)</td>
+                    <td>It uses a key to encrypt and decrypt data and is highly secure and resistant to known
+                        cryptographic attacks. It is widely used in applications such as file encryption, disk
+                        encryption, and network encryption.</td>
+                </tr>
+                <tr>
+                    <td>RSA with keys of at least 2048 bits</td>
+                    <td>It is a widely used and secure asymmetric encryption algorithm, but it is recommended to use
+                        keys of at least 2048 bits for better security.</td>
+                </tr>
+                <tr>
+                    <td>SHA-256 (Secure Hash Algorithm 256)</td>
+                    <td>It is a secure hash algorithm used to verify data integrity. It is highly resistant to data
+                        tampering attempts and is widely used in computer security applications.</td>
+                </tr>
+                <tr>
+                    <td>Blowfish</td>
+                    <td>It is a very secure and fast symmetric block cipher that is widely used in computer security
+                        applications such as file encryption and password encryption.</td>
+                </tr>
+            </table>
+
+            <hr>
+
+
+            <p>To enhance the protection of data during its transfer, it is crucial to utilise secure and updated
+                software and hardware. This involves implementing firewalls, intrusion detection and prevention systems,
+                and antivirus software. By regularly updating and patching these systems, the likelihood of
+                vulnerabilities and exploits that could endanger data is reduced.</p>
+            <p>
+                It is also advisable to utilise virtual private networks (VPNs) to encrypt data during transit,
+                preventing unauthorised interception and access. VPNs establish a secure and private network connection
+                between multiple devices, even over a public network.</p>
+
+
+        </article>
+    </main>
+    <footer class="container text-center my-4">
+        <p>&copy; 2023 - Matthew and Seikou</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

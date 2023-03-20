@@ -1,0 +1,30 @@
+body {
+    background-color: black !important;
+}
+
+h1,
+h2,
+h3 {
+    color: antiquewhite;
+}
+
+p,
+li,
+ul,
+th,
+td,
+table {
+    color: white;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    color: aliceblue;
+}
+
+.card-img-top {
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+    color: black;
+}
